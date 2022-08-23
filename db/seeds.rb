@@ -66,7 +66,6 @@ morgan = User.create([
         ])
 
 
-
 # FISHES seeds:
 bernard = Fish.create([
         { title: "Bernard" },
