@@ -13,7 +13,7 @@ marin = User.create([
         { last_name: "Dodousse" },
         { first_name: "Marin" },
         { email: "marin.dodousse@gmail.com" },
-        { password: "vivelapeche" }
+        { password: "vivelapeche" },
         { description: "J'aime sentir l'odeur de poisson, les brises marines sont revigorantes et m'apporte un très beau teint" },
         { avatar_url: "app/assets/images/avatars/users/marin_avatar.jpg" }])
 
@@ -21,7 +21,7 @@ james = User.create([
         { last_name: "Cook" },
         { first_name: "James" },
         { email: "james.cook@newfoundland.com" },
-        { password: "ouicapitaine" }
+        { password: "ouicapitaine" },
         { description: "J'adore la mer et les poissons" },
         { avatar_url: "app/assets/images/avatars/users/james_avatar.jpg" }])
 
@@ -29,7 +29,7 @@ edward = User.create([
         { last_name: "Teach" },
         { first_name: "Edward" },
         { email: "barbenoire@gmail.com" },
-        { password: "tuertoutlemonde" }
+        { password: "tuertoutlemonde" },
         { description: "J'adore tuer des gens mais les poissons ça va parce que c'est pas vraiment des humains donc j'accepte de les laisser en vie! Et d'ailleurs je m'en occupe super bien" },
         { avatar_url: "app/assets/images/avatars/users/edward_avatar.jpg" }])
 
@@ -37,7 +37,7 @@ smith = User.create([
         { last_name: "Smith" },
         { first_name: "James" },
         { email: "j.smith@titanic.com" },
-        { password: "titanic" }
+        { password: "titanic" },
         { description: "Fan de navigation, après quelques soucis avec mon bateau j'ai décidé de m'intérésser à le faune et la flore marine de manière à mieux appréhender l'environnement qui m'entoure pour ne pas casser mon futur bateau (pas comme le précédent)" },
         { avatar_url: "app/assets/images/avatars/users/smith_avatar.jpg" }])
 
@@ -45,7 +45,7 @@ christophe = User.create([
         { last_name: "Colomb" },
         { first_name: "Christophe" },
         { email: "tof.colomb@bateau.us" },
-        { password: "godbless" }
+        { password: "godbless" },
         { description: "Comme j'ai découvert l'amérique, j'ai découvert aussi toutes les sortes de poissons que vous connaissez et c'est grace à moi que vous êtes ici aujourd'hui! Je mets toutes mes découvertes dans des aquariums et des bocaux pour me souvenir de tout ce que j'ai accomplis" },
         { avatar_url: "app/assets/images/avatars/users/christophe_avatar.jpg" }])
 
@@ -53,7 +53,7 @@ hook = User.create([
         { last_name: "Crochet" },
         { first_name: "Capitaine" },
         { email: "capitaine-crochet@gmail.com" },
-        { password: "tuerpeterpan" }
+        { password: "tuerpeterpan" },
         { description: "Mon seul but, c'est de tuer Peter Pan. Et quand j'ai le temps en dehors de ça je collectionne et observe les poissons" },
         { avatar_url: "app/assets/images/avatars/users/hook_avatar.jpg" }])
 
@@ -61,7 +61,7 @@ morgan = User.create([
         { last_name: "Morgan" },
         { first_name: "Junior" },
         { email: "captainmorgan@gmail.com" },
-        { password: "avecducocacestmieux" }
+        { password: "avecducocacestmieux" },
         { description: "Fan de bon whisky, j'aime me prélasser devant mon aquarium autour d'un bon verre et discuter avec tout mes amis (qui ont tous des nageoires)" },
         { avatar_url: "app/assets/images/avatars/users/morgan_avatar.jpg" }])
 
@@ -146,6 +146,6 @@ maurice = Fish.create([
 #         { status: "" },
 #         { start_time: "" },
 #         { end_time: "" },
-#         { total_price: 5 },
-#         { owner_rating: 2 },
-#         { user_rating: }])
+#         { total_price:  },
+#         { owner_rating: "" },
+#         { user_rating: ""}])
