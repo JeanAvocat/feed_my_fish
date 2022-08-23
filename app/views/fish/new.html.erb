@@ -1,0 +1,9 @@
+<%= simple_form_for(@fish) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :specie, collection: Fish::SPECIES %>
+  <%= f.input :description %>
+  <%= f.input :picture_url, as: :file %>
+  <%= f.input :location %>
+  <%= f.input :daily_price %>
+  <%= f.submit %>
+<% end %>
