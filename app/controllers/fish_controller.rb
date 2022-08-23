@@ -1,4 +1,11 @@
 class FishController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: %i[index show]
+
+  def index
+    @fish = Fish.all
+  end
+  
   def new
     @fish = Fish.new
   end
@@ -8,10 +15,6 @@ class FishController < ApplicationController
     @fish.owner = current_user
     @fish.save
     redirect_to fish_path(@fish)
-  end
-
-  def index
-    @fish = Fish.all
   end
 
   private

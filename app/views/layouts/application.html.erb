@@ -7,13 +7,14 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%# J'ai mis en commentaire la commande du dessous pour pouvoir acceder à mon server local%>
-    <%# <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# J'ai mis en commentaire la commande du dessous pour pouvoir acceder à mon server local %>
+    <%# C'est mieux d'ouvrir le server yarn avec la commande 'yarn build --watch' dans ton terminal, sinon on a plus de JS %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/navbar" unless current_page?('/') %>
+    <%= render "shared/flashes" %>
     <%= yield %>
   </body>
 </html>
