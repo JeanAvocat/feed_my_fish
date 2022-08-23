@@ -53,6 +53,7 @@ morgan = User.create!(last_name: "Morgan",
                       description: "Fan de bon whisky, j'aime me prélasser devant mon aquarium autour d'un bon verre et discuter avec tout mes amis (qui ont tous des nageoires)")
 
 
+
 # FISHES seeds:
 bernard = Fish.create!(title: "Bernard",
                        specie: "Blodfish",
