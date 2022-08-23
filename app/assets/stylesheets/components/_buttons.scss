@@ -1,0 +1,14 @@
+.btn-lightblue {
+  color: white;
+  text-decoration: none;
+  background-color: lightblue;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 50;
+  transition: opacity 0.3s ease;
+}
+
+.btn-lightblue:hover {
+  opacity: 1;
+  font-weight: bold;
+}

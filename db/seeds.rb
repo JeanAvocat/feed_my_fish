@@ -66,6 +66,7 @@ morgan = User.create([
         { avatar_url: "app/assets/images/avatars/users/morgan_avatar.jpg" }])
 
 
+
 # FISHES seeds:
 bernard = Fish.create([
         { title: "Bernard" },
