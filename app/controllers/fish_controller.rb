@@ -1,6 +1,6 @@
 class FishController < ApplicationController
 
-  def show
-    @fish = Fish.find(params[:id])
+  def index
+    @fish = Fish.all
   end
 end

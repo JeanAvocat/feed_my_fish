@@ -1,0 +1,9 @@
+<div class="card-product">
+  <% @fish.each do |fish| %>
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2><%= fish.title %></h2>
+    <p><%= fish.description %> <strong><%= fish.daily_price %></strong> par jour.</p>
+  </div>
+  <% end %>
+</div>
