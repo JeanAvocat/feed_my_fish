@@ -5,8 +5,8 @@ class Booking < ApplicationRecord
   STATUS = ["En attente de validation", "Confirmé", "Refusé"]
   validates :status, presence: true, inclusion: STATUS
 
-  validates :owner_rating, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5, only_integer: true }
-  validates :user_rating, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5, only_integer: true }
+  # validates :owner_rating, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5, only_integer: true }
+  # validates :user_rating, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5, only_integer: true }
 
   validates :start_time, presence: true
   validates :end_time, presence: true
