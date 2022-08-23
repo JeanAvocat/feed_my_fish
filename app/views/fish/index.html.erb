@@ -1,0 +1,8 @@
+<div class="cards">
+  <% @fish.each do |fish| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= fish.picture_url %>)">
+    <h2><%= fish.title %></h2>
+    <p><%= fish.description %> <strong><%= fish.daily_price %>€</strong> par jour.</p>
+  </div>
+  <% end %>
+</div>
