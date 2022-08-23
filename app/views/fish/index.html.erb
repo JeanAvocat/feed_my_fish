@@ -1,8 +1,19 @@
-<div class="cards">
-  <% @fish.each do |fish| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= fish.picture_url %>)">
-    <h2><%= fish.title %></h2>
-    <p><%= fish.description %> <strong><%= fish.daily_price %>€</strong> par jour.</p>
+
+<div class="fishes-cards">
+  <div class="cards">
+    <% @fish.each do |fish| %>
+    <div class="fish-card">
+      <img class="fish-image">
+      <div class="fish-informations">
+      <div class="text-card"><h2><%= fish.title %></h2>
+      <p><%= fish.location %></p>
+      <p>Dates de disponibilités</p></div>
+      <div class="rating">
+      <h3>♥ 5</h3>
+      <h2><%= fish.daily_price %>€</h2>
+      </div>
+      </div>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
