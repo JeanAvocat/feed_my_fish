@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_22_165938) do
   create_table "fish", force: :cascade do |t|
     t.string "title"
     t.string "location"
-    t.string "picture"
+    t.string "picture_url"
     t.string "specie"
     t.text "description"
     t.integer "daily_price"

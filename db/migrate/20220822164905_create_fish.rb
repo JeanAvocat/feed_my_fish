@@ -3,7 +3,7 @@ class CreateFish < ActiveRecord::Migration[7.0]
     create_table :fish do |t|
       t.string :title
       t.string :location
-      t.string :picture
+      t.string :picture_url
       t.string :specie
       t.text :description
       t.integer :daily_price
