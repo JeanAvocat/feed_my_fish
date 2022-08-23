@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
   get "pages/about", to: "pages#about"
-  get "my_bookings", to: "my_bookings#index"
+  resources :my_bookings, only: :index
   resources :bookings, only: [:show] do
     member do
       patch :confirm
