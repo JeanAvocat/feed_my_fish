@@ -142,10 +142,10 @@ maurice = Fish.create([
 
 
 # BOOKINGS seeds:
-variable = Booking.create([
-        { status: "" },
-        { start_time: "" },
-        { end_time: "" },
-        { total_price: 5 },
-        { owner_rating: 2 },
-        { user_rating: }])
+# variable = Booking.create([
+#         { status: "" },
+#         { start_time: "" },
+#         { end_time: "" },
+#         { total_price: 5 },
+#         { owner_rating: 2 },
+#         { user_rating: }])
