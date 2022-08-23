@@ -1,2 +1,2 @@
-class FishsController < ApplicationController
+class FishController < ApplicationController
 end
