@@ -1,7 +1,6 @@
 # Les trops belles et biens faites seeds
 
 # USERS seeds
-<<<<<<< HEAD
 alfred = User.create([
         { last_name: "Gaudin" },
         { first_name: "Alfred" },
