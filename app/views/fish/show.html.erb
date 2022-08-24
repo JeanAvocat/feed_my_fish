@@ -1,3 +1,5 @@
+<%= link_to "< Retour", fish_index_path, class: "btn-return" %>
+
 <div class="m-3">
   <h2 class="m-3 text-center"><%= @fish.title.upcase %></h2>
   <div class="d-flex justify-content-center">
@@ -26,12 +28,18 @@
     </div>
   </div>
 
-  <div><h2>Je veux garder ce poisson:</h2></div>
-  <div>
+<div class="form-bloc">
+<h2>Je veux garder ce poisson</h2>
+
     <%= simple_form_for([@fish, @booking]) do |f| %>
-      <%= f.input :start_time, as: :date %>
-      <%= f.input :end_time, as: :date %>
-      <%= f.submit "Demander à garder ce poisson", class: "btn btn-primary", name: "create_booking" %>
+    <div class="form">
+      <%= f.input :start_time, as: :date, label: "Date de début" %>
+      <%= f.input :end_time, as: :date, label: "Date de fin" %>
+    </div>
+
+    <div class="btn-submit">
+      <%= f.button :submit, "Demander à garder ce poisson", name: "create_booking" %>
+    </div>
     <% end %>
-  </div>
+
 </div>
