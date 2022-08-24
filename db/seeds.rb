@@ -1,6 +1,7 @@
 # Les trops belles et biens faites seeds
 
 # USERS seeds
+Booking.destroy_all
 Fish.destroy_all
 User.destroy_all
 
