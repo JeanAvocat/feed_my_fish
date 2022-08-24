@@ -24,4 +24,12 @@
   <div class="btn-lightblue mt-4 btn-lg" style="width:12rem;">
     <%= link_to 'Garder ce poisson', fish_bookings_path(@fish) %>
   </div>
+
+  <div>
+    <%= simple_form_for([@fish, @booking]) do |f| %>
+      <%= f.input :start_time, as: :date %>
+      <%= f.input :end_time, as: :date %>
+      <%= f.submit "Demander à garder ce poisson", class: "btn btn-primary", name: "create_booking" %>
+    <% end %>
+  </div>
 </div>
