@@ -11,7 +11,9 @@
   </head>
 
 <<<<<<< HEAD
-  <body>
+  <body <% if current_page?('/') %>
+    class="dark-blue"
+    <% end %>>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 =======
