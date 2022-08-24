@@ -1,22 +1,28 @@
-<h2>Log in</h2>
+<%# PAGE DE CONNEXION %>
+<%= link_to "< Retour", fish_index_path, class: "btn-return" %>
+
+<div class="form-bloc">
+<h2>Se connecter</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
   data: {turbo: false}) do |f| %>
-  
-  <div class="form-inputs">
+
+  <div class="form">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
     <%= f.input :password,
+                label: "Mot de passe",
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%# J'ai commenter ça parce que je sais pas comment changer le "Remember me" en "Se souvenir de moi"
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="btn-submit">
+    <%= f.button :submit, "Connection" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<p><%= render "devise/shared/links" %></p></div>
