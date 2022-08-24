@@ -48,3 +48,96 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
+// LIGNES CI-DESSOUS IMPORTEES DE CARD.SCSS
+
+// CARDS INITIALES DE L'INDEX
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+
+
+// CARDS FOR SHOW VIEW (FISH)
+
+
+.card-trip-fish-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: black;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.card-trip-fish-show > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip-fish-show h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip-fish-show h3 {
+  font-size: 15px;
+  margin: 0;
+  opacity: .9;
+  margin: 0;
+}
+
+.card-trip-fish-show p, li {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip-fish-show .card-trip-fish-show-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-fish-show-infos .card-trip-fish-show-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
