@@ -1,0 +1,27 @@
+<div class="m-3">
+  <h2 class="m-3 text-center"><%= @fish.title.upcase %></h2>
+  <div class="d-flex justify-content-center">
+    <div class="card-trip-fish-show">
+      <img src= "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+      <div class="card-trip-fish-show-infos">
+        <div>
+          <h3>A propos de <%= @fish.title %> :</h3>
+          <p><%= @fish.description %></p>
+          <div class="mt-2">
+            <h3>Details pratiques :</h3>
+            <ul>
+              <li> Espèce : <%= @fish.specie %></li>
+              <li> Zone géographique : <%= @fish.location %></li>
+            </ul>
+          </div>
+        </div>
+        <h2 class="card-trip-fish-show-pricing"><%= @fish.daily_price %>€ / jour</h2>
+        <%# IMPORTANT : modifier avec avatar du fish owner %>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-fish-show-user avatar-bordered" />
+      </div>
+    </div>
+  </div>
+  <div class="btn-lightblue mt-4 btn-lg" style="width:12rem;">
+    <%= link_to 'Garder ce poisson', fish_bookings_path(@fish) %>
+  </div>
+</div>
