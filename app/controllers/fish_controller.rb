@@ -8,6 +8,7 @@ class FishController < ApplicationController
 
   def show
     @fish = Fish.find(params[:id])
+  end
 
   def new
     @fish = Fish.new

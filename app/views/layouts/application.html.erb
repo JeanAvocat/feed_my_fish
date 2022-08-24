@@ -10,17 +10,14 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-<<<<<<< HEAD
   <body <% if current_page?('/') %>
     class="dark-blue"
     <% end %>>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-=======
   <body>
     <%= render "shared/navbar" unless current_page?('/') %>
     <%= render "shared/flashes" %>
->>>>>>> eb86a3853f06bac297806b275719b61cf9873aa5
     <%= yield %>
   </body>
 </html>
