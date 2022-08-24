@@ -1,0 +1,24 @@
+.mbtitle {
+    color: black;
+    font-size: 32px;
+    margin-top: 25px;
+}
+.mbinfo {
+  color: black;
+  font-size: 13px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 30px;
+  justify-content: space-between;
+  padding: 0px 10px 0px 0px;
+  p {
+    color: black;
+  font-size: 17px;
+  }
+}
+.btn_dispo {
+  column-count: 1;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}

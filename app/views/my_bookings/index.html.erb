@@ -1,0 +1,22 @@
+<h2 class="text-center mbtitle">Mes demandes de garde</h2>
+  <% @fish.each do |fish| %>
+    <div class="card-product mbinfo">
+      <img src="https://images.unsplash.com/photo-1634834787429-54f833042098?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+      <p><strong><%= fish.title %></strong></p>
+      <p><strong>Billy</strong></p>
+      <div class="btn_dispo">
+      <input type="button" value="Accepter" class="btn-blue">
+      <input type="button" value="Refuser" class="btn-red">
+      </div>
+    </div>
+  <% end %>
+</div>
+<h2 class="text-center mbtitle">Mes gardes à venir</h2>
+  <% @fish.each do |fish| %>
+    <div class="card-product mbinfo">
+    <img src="https://images.unsplash.com/photo-1634834787429-54f833042098?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+    <p><strong><%= fish.title %></strong></p>
+    <p><%= fish.specie %></p>
+    <p><%= fish.daily_price %>€</p>
+    </div>
+  <% end %>
