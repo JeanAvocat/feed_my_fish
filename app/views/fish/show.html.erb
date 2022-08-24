@@ -21,10 +21,8 @@
       </div>
     </div>
   </div>
-  <div class="btn-lightblue mt-4 btn-lg" style="width:12rem;">
-    <%= link_to 'Garder ce poisson', fish_bookings_path(@fish) %>
-  </div>
 
+  <div><h2>Je veux garder ce poisson:</h2></div>
   <div>
     <%= simple_form_for([@fish, @booking]) do |f| %>
       <%= f.input :start_time, as: :date %>
