@@ -3,6 +3,7 @@
   <div class="cards">
     <% @fish.each do |fish| %>
     <div class="fish-card">
+      <%= link_to fish_path(fish), class: "link-fish" do %>
       <img class="fish-image">
       <div class="fish-informations">
       <div class="text-card"><h2><%= fish.title %></h2>
@@ -13,6 +14,7 @@
       <h2><%= fish.daily_price %>€</h2>
       </div>
       </div>
+      <% end %>
     </div>
     <% end %>
   </div>
