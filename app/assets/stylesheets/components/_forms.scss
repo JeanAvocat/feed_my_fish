@@ -1,0 +1,32 @@
+.form-bloc {
+  padding: 30px 240px 30px 240px;
+
+  h2 {
+    color: $poissonrouge;
+    text-align: center;
+  }
+
+  p {
+    color: $lightgray;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.form {
+  color: $darkgray;
+  padding: 30px;
+}
+
+.form-control {
+  background-color: white;
+  border: $lightgray;
+  border-radius: 10px;
+  color: $darkgray
+}
+
+.btn-submit {
+  text-align: center;
+  padding: 30px;
+}

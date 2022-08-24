@@ -12,3 +12,30 @@
   opacity: 1;
   font-weight: bold;
 }
+
+.btn-return {
+  text-decoration: none;
+  color: $lightgray;
+  padding: 20px;
+  line-height: 40px;
+}
+
+.btn-return:hover {
+  color: $poissonrouge;
+}
+
+.btn {
+  text-align: center;
+  background-color: $mediumblue;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+}
+
+.btn:hover {
+  text-align: center;
+  background-color: $poissonrouge;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+}
