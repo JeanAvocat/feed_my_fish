@@ -2,6 +2,8 @@ class Fish < ApplicationRecord
   belongs_to :owner, class_name: "User"
   has_many :bookings
 
+  has_one_attached :photo
+
   SPECIES = ["Blodfish", "Poisson volant", "Poisson rouge", "Grosse carpe", "Poisson à dents", "Sirène", "Poisson combattant", "Guppies"]
   validates :title, presence: true
   validates :location, presence: true

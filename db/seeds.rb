@@ -59,7 +59,6 @@ bernard = Fish.create!(title: "Bernard",
                        location: "Angers",
                        daily_price: 1,
                        description: "Bernard est un gentil petit pardon gros poisson qui pèse bientot 58kg. Il a pas l’air comme ça mais il est très doux et gentil! Aidez moi a partir en vacances sans devoir l’abandonner",
-                       picture_url: "app/assets/images/avatars/fishes/bernard_avatar.jpg",
                        owner: james)
 
 benoit = Fish.create!(title: "Benoit" ,
@@ -67,7 +66,6 @@ benoit = Fish.create!(title: "Benoit" ,
                       location: "Suisse",
                       daily_price: 15,
                       description: "Benoit est le meilleur des poissons, il est fort à l'école et au travail, il fait bien la cuisine et le ménage,... Il est vraiment exceptionnel!",
-                      picture_url: "app/assets/images/avatars/fishes/benoit_avatar.jpg",
                       owner: morgan)
 
 bubble = Fish.create!(title: "Bubble",
@@ -75,7 +73,6 @@ bubble = Fish.create!(title: "Bubble",
                       location: "Bordeaux",
                       daily_price: 3,
                       description: "Bubble aime bien manger à la cantine, c'est pour ça qu'il a de grosses joues donc ne le jugez pas trop!" ,
-                      picture_url: "app/assets/images/avatars/fishes/bubble_avatar.jpg",
                       owner: james)
 
 croquette = Fish.create!(title: "Croquette",
@@ -83,7 +80,6 @@ croquette = Fish.create!(title: "Croquette",
                          location: "Nantes",
                          daily_price: 2,
                          description: "Je l'ai gagné à la fête foraine il y a 24 ans et depuis on ne se quitte plus! Bubble et moi on est les meilleurs amis du monde! Je l'aime trop! Best friend forever!",
-                         picture_url: "app/assets/images/avatars/fishes/croquette_avatar.jpg",
                          owner: smith)
 
 bouba = Fish.create!(title: "Bouba",
@@ -91,7 +87,6 @@ bouba = Fish.create!(title: "Bouba",
                      location: "Floride",
                      daily_price: 2,
                      description: "Je vous présente le Duc de tous les poissons! Il est trop fort mais peut s'avérer assez violent envers ses congénères! Il ne s'endort qu'en écoutant Sexion d'assault...",
-                     picture_url: "app/assets/images/avatars/fishes/bouba_avatar.jpg",
                      owner: smith)
 
 jean = Fish.create!(title: "Jean",
@@ -99,7 +94,6 @@ jean = Fish.create!(title: "Jean",
                     location: "Paris",
                     daily_price: 5,
                     description: "Jean est un super poisson! Il fait que de faire le petit train avec ses buddies d'aquarium, c'est assez rigolo! Je pense qu'il est vraiment très fan des wagons!" ,
-                    picture_url: "app/assets/images/avatars/fishes/jean_avatar.jpg",
                     owner: christophe)
 
 nemo = Fish.create!(title: "Nemo",
@@ -107,7 +101,6 @@ nemo = Fish.create!(title: "Nemo",
                     location: "Floride",
                     daily_price: 4,
                     description: "Je l'ai trouvé dans le courant est australien puis l'ai ramené chez moi, il a une nageoire attrofiée mais c'est ok il arrive quand même a bien nager!",
-                    picture_url: "app/assets/images/avatars/fishes/nemo_avatar.jpg",
                     owner: marin)
 
 marguerite = Fish.create!(title: "Marguerite",
@@ -115,7 +108,6 @@ marguerite = Fish.create!(title: "Marguerite",
                           location: "Nantes",
                           daily_price: 8,
                           description: "C'est le plus beau, le plus intelligent et le plus gentil des poissons que j'ai jamais vu! Surement parce qu'elle s'appelle Marguerite!",
-                          picture_url: "app/assets/images/avatars/fishes/marguerite_avatar.jpg",
                           owner: hook)
 
 maurice = Fish.create!(title: "Maurice",
@@ -123,7 +115,6 @@ maurice = Fish.create!(title: "Maurice",
                        location: "La Rochelle",
                        daily_price: 2,
                        description: "Attention Maurice mord! Il est pas très gentil et fait que de manger toutes mes Danettes au chocolat... Il pousse vraiment le bouchon un peu trop loin!",
-                       picture_url: "app/assets/images/avatars/fishes/maurice_avatar.jpg",
                        owner: marin)
 # BOOKINGS seeds:
 # variable = Booking.create(

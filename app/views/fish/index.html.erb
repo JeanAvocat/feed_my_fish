@@ -4,16 +4,22 @@
     <% @fish.each do |fish| %>
     <div class="fish-card">
       <%= link_to fish_path(fish), class: "link-fish" do %>
-      <img class="fish-image">
-      <div class="fish-informations">
-      <div class="text-card"><h2><%= fish.title %></h2>
-      <p><%= fish.specie %></p>
-      <p><%= fish.location %></p></div>
-      <div class="rating">
-      <h3>♥ 5</h3>
-      <h2><%= fish.daily_price %>€</h2>
-      </div>
-      </div>
+        <% if fish.photo.attached?  %>
+          <%= cl_image_tag fish.photo.key, class: "fish-image" %>
+        <% else %>
+          <img class="fish-image">
+        <% end %>
+        <div class="fish-informations">
+          <div class="text-card">
+            <h2><%= fish.title %></h2>
+            <p><%= fish.specie %></p>
+            <p><%= fish.location %></p>
+          </div>
+          <div class="rating">
+            <h3>♥ 5</h3>
+            <h2><%= fish.daily_price %>€</h2>
+          </div>
+        </div>
       <% end %>
     </div>
     <% end %>
