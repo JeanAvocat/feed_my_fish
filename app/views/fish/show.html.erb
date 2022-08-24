@@ -2,7 +2,11 @@
   <h2 class="m-3 text-center"><%= @fish.title.upcase %></h2>
   <div class="d-flex justify-content-center">
     <div class="card-trip-fish-show">
-      <img src= "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+      <% if @fish.photo.attached?  %>
+        <%= cl_image_tag @fish.photo.key %>
+      <% else %>
+        <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+      <% end %>
       <div class="card-trip-fish-show-infos">
         <div>
           <h3>A propos de <%= @fish.title %> :</h3>
