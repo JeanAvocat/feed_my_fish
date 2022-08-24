@@ -1,14 +1,21 @@
-<h2>Sign up</h2>
+<%# FORMULAIRE D'INSCRIPTION %>
+
+<%= link_to "< Retour", fish_index_path, class: "btn-return" %>
+
+<div class="form-bloc">
+<h2>Inscription</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
   data: {turbo: false}) do |f| %>
 
-  <div class="form-inputs">
+  <div class="form">
     <%= f.input :first_name,
+                label: "Prénom",
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :last_name,
+                label: "Nom",
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
@@ -21,17 +28,19 @@
                 autofocus: false,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
+                label: "Mot de passe",
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: "Confirmez votre mot de passe",
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="btn-submit">
+    <%= f.button :submit, "S'enregistrer" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<p>Ou connectez-vous à votre compte: <%= render "devise/shared/links" %></p></div>

@@ -1,9 +1,26 @@
+<%# CREER UN POISSON %>
+
+<%= link_to "< Retour", fish_index_path, class: "btn-return" %>
+
+<div class="form-bloc">
+<h2>Créer un poisson</h2>
+
 <%= simple_form_for(@fish) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :specie, collection: Fish::SPECIES %>
-  <%= f.input :description %>
-  <%= f.input :picture_url, as: :file %>
-  <%= f.input :location %>
-  <%= f.input :daily_price %>
-  <%= f.submit %>
+
+  <div class="form">
+    <%= f.input :title,
+                label: "Nom du poisson" %>
+    <%= f.input :specie, collection: Fish::SPECIES,
+                label: "Espece"%>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :location,
+                label: "Ville" %>
+    <%= f.input :daily_price,
+                label: "Rémunération à la journée"%>
+  </div>
+
+  <div class="btn-submit">
+    <%= f.button :submit, "Créer un poisson" %>
+  </div>
 <% end %>

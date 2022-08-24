@@ -8,6 +8,7 @@ class FishController < ApplicationController
 
   def show
     @fish = Fish.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -24,6 +25,6 @@ class FishController < ApplicationController
   private
 
   def fish_params
-    params.require(:fish).permit(:title, :location, :picture_url, :specie, :description, :daily_price, :owner)
+    params.require(:fish).permit(:title, :location, :specie, :photo, :description, :daily_price, :owner)
   end
 end

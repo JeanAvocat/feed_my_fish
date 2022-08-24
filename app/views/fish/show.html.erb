@@ -2,7 +2,11 @@
   <h2 class="m-3 text-center"><%= @fish.title.upcase %></h2>
   <div class="d-flex justify-content-center">
     <div class="card-trip-fish-show">
-      <img src= "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+      <% if @fish.photo.attached?  %>
+        <%= cl_image_tag @fish.photo.key %>
+      <% else %>
+        <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+      <% end %>
       <div class="card-trip-fish-show-infos">
         <div>
           <h3>A propos de <%= @fish.title %> :</h3>
@@ -21,7 +25,13 @@
       </div>
     </div>
   </div>
-  <div class="btn-lightblue mt-4 btn-lg" style="width:12rem;">
-    <%= link_to 'Garder ce poisson', fish_bookings_path(@fish) %>
+
+  <div><h2>Je veux garder ce poisson:</h2></div>
+  <div>
+    <%= simple_form_for([@fish, @booking]) do |f| %>
+      <%= f.input :start_time, as: :date %>
+      <%= f.input :end_time, as: :date %>
+      <%= f.submit "Demander à garder ce poisson", class: "btn btn-primary", name: "create_booking" %>
+    <% end %>
   </div>
 </div>
