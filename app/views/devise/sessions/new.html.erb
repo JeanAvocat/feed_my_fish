@@ -16,7 +16,8 @@
                 label: "Mot de passe",
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%# J'ai commenter ça parce que je sais pas comment changer le "Remember me" en "Se souvenir de moi"
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
   </div>
 
   <div class="btn-submit">
