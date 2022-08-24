@@ -1,6 +1,71 @@
 # Les trops belles et biens faites seeds
 
 # USERS seeds
+<<<<<<< HEAD
+alfred = User.create([
+        { last_name: "Gaudin" },
+        { first_name: "Alfred" },
+        { email: "alfred.gaudin@gmail.com" },
+        { password: "jaimelespoissons" },
+        { description: "Fan de pêche, j'adore prendre soin de mes poissons et passer du temps devant mon aquarium à les regarder. J'aime la nature et encore plus les océans donc je trouve ça super de pouvoir apporter un petit bout d'océan chez moi" },
+       ])
+
+marin = User.create([
+        { last_name: "Dodousse" },
+        { first_name: "Marin" },
+        { email: "marin.dodousse@gmail.com" },
+        { password: "vivelapeche" },
+        { description: "J'aime sentir l'odeur de poisson, les brises marines sont revigorantes et m'apporte un très beau teint" },
+        ])
+
+james = User.create([
+        { last_name: "Cook" },
+        { first_name: "James" },
+        { email: "james.cook@newfoundland.com" },
+        { password: "ouicapitaine" },
+        { description: "J'adore la mer et les poissons" },
+        ])
+
+edward = User.create([
+        { last_name: "Teach" },
+        { first_name: "Edward" },
+        { email: "barbenoire@gmail.com" },
+        { password: "tuertoutlemonde" },
+        { description: "J'adore tuer des gens mais les poissons ça va parce que c'est pas vraiment des humains donc j'accepte de les laisser en vie! Et d'ailleurs je m'en occupe super bien" },
+        ])
+
+smith = User.create([
+        { last_name: "Smith" },
+        { first_name: "James" },
+        { email: "j.smith@titanic.com" },
+        { password: "titanic" },
+        { description: "Fan de navigation, après quelques soucis avec mon bateau j'ai décidé de m'intérésser à le faune et la flore marine de manière à mieux appréhender l'environnement qui m'entoure pour ne pas casser mon futur bateau (pas comme le précédent)" },
+        ])
+
+christophe = User.create([
+        { last_name: "Colomb" },
+        { first_name: "Christophe" },
+        { email: "tof.colomb@bateau.us" },
+        { password: "godbless" },
+        { description: "Comme j'ai découvert l'amérique, j'ai découvert aussi toutes les sortes de poissons que vous connaissez et c'est grace à moi que vous êtes ici aujourd'hui! Je mets toutes mes découvertes dans des aquariums et des bocaux pour me souvenir de tout ce que j'ai accomplis" },
+        ])
+
+hook = User.create([
+        { last_name: "Crochet" },
+        { first_name: "Capitaine" },
+        { email: "capitaine-crochet@gmail.com" },
+        { password: "tuerpeterpan" },
+        { description: "Mon seul but, c'est de tuer Peter Pan. Et quand j'ai le temps en dehors de ça je collectionne et observe les poissons" },
+        ])
+
+morgan = User.create([
+        { last_name: "Morgan" },
+        { first_name: "Junior" },
+        { email: "captainmorgan@gmail.com" },
+        { password: "avecducocacestmieux" },
+        { description: "Fan de bon whisky, j'aime me prélasser devant mon aquarium autour d'un bon verre et discuter avec tout mes amis (qui ont tous des nageoires)" },
+       ])
+=======
 Fish.destroy_all
 User.destroy_all
 
@@ -51,6 +116,7 @@ morgan = User.create!(last_name: "Morgan",
                       email: "captainmorgan@gmail.com",
                       password: "avecducocacestmieux",
                       description: "Fan de bon whisky, j'aime me prélasser devant mon aquarium autour d'un bon verre et discuter avec tout mes amis (qui ont tous des nageoires)")
+>>>>>>> 312cb1e7af19b8e49c6af865aa8e478669a4b9d8
 
 
 
