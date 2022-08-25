@@ -1,5 +1,5 @@
 .btn-lightblue {
-  color: white;
+  color: $darkblue;
   text-decoration: none;
   background-color: lightblue;
   padding: 8px 24px;
@@ -11,6 +11,8 @@
 .btn-lightblue:hover {
   opacity: 1;
   font-weight: bold;
+  background-color: $poissonrouge;
+  color: white;
 }
 
 .btn-return {
