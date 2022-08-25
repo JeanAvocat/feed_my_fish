@@ -12,6 +12,8 @@ class FishController < ApplicationController
   def show
     @fish = Fish.find(params[:id])
     @booking = Booking.new
+
+    @markers = { lat: @fish.latitude, lng: @fish.longitude }
   end
 
   def new
