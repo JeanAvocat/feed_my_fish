@@ -8,11 +8,17 @@
         <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
       <% end %>
       <p><strong><%= book.fish.title %></strong></p>
-      <p><strong><%= book.keeper.first_name %> <%= book.keeper.last_name %></strong></p>
+      <p><%= book.keeper.first_name %> <%= book.keeper.last_name %></p>
       <p><%= book.start_time %> <%= book.end_time %></p>
       <div class="btn_dispo">
-      <input type="button" value="Accepter" class="btn-blue">
-      <input type="button" value="Refuser" class="btn-red">
+      <% if book.status == "En attente de validation" %>
+      <%= link_to "Accepter", confirm_booking_path(book),
+  data: {turbo_method: :patch}%>
+      <%= link_to "Refuser", decline_booking_path(book),
+  data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+      <% else %>
+        <p><strong><%= book.status %></strong></p>
+      <% end %>
       </div>
     </div>
     <% end %>
