@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
   get "about", to: "pages#about"
+  get "profil", to: "pages#profil"
   resources :my_bookings, only: :index
   resources :bookings, only: [:show] do
     member do

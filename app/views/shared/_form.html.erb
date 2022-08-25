@@ -1,0 +1,23 @@
+<%= simple_form_for(@fish) do |f| %>
+
+  <div class="form">
+    <%= f.input :title,
+                label: "Nom du poisson" %>
+    <%= f.input :specie, collection: Fish::SPECIES,
+                label: "Espece"%>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :location,
+                label: "Ville" %>
+    <%= f.input :daily_price,
+                label: "Rémunération à la journée"%>
+  </div>
+
+  <div class="btn-submit">
+    <% if current_page?('/fish/new') %>
+    <%= f.button :submit,"Créer un poisson" %>
+    <% else %>
+    <%= f.button :submit,"Modifier un poisson" %>
+  </div>
+    <% end %>
+<% end %>
