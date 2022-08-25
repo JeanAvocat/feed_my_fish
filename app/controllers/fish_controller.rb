@@ -8,7 +8,6 @@ class FishController < ApplicationController
 
   def show
     @fish = Fish.find(params[:id])
-    raise
     @booking = Booking.new
   end
 

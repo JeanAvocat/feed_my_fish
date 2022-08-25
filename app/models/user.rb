@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :fish, foreign_key: :owner_id
   has_many :bookings, foreign_key: :keeper_id
 
-  has_one_attached :photo_profil
+  has_one_attached :avatar
 
   validates :first_name, :last_name, :email, :password, presence: true
 end
