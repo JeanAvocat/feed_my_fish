@@ -1,0 +1,5 @@
+<% if owner.avatar.attached? %>
+  <%= cl_image_tag owner.avatar.key, class: "avatar" %>
+<% else %>
+  <%= image_tag "avatars/fishes/stupid_fish.jpg", class: "avatar" %>
+<% end %>
