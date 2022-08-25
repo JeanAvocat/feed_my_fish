@@ -26,6 +26,19 @@
   color: $poissonrouge;
 }
 
+.btn-return-show {
+  position: absolute;
+  text-decoration: none;
+  color: $lightgray;
+  left: 20px;
+  top: 85px;
+  text-shadow: 0px 0px 2px black;
+}
+
+.btn-return-show:hover {
+  color: $poissonrouge;
+}
+
 .btn {
   text-align: center;
   background-color: $mediumblue;

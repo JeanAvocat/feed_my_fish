@@ -1,26 +1,26 @@
 // Show d'un fish
-
-.m-3 {
-  color: black;
+.show-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.d-flex {
-  padding: 30px 0px 45px 0px;
+.show-fish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
 
 .card-trip-fish-show {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   color: black;
-  width: 70%;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 0px;
 }
 
 .card-trip-fish-show > img {
-  height: 250px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }
@@ -45,17 +45,45 @@
 }
 
 
-.card-trip-fish-show .card-trip-fish-show-infos {
-  padding: 16px;
+.fish-show-infos {
+  padding: 50px 10px 20px 10px;
+  margin: -100px 0px 40px 0px;
   display: flex;
+  width: 70%;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 1px grey;
+  border-radius: 5px 5px 0px 0px;
 }
 
-.card-trip-fish-show-infos .card-trip-fish-show-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card-trip-fish-show-fish {
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  right: 0px;
+  top: -60px;
+  width: 180px;
+  box-shadow: 0px 0px 0px grey;
+}
+
+.details-fish {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-right-style: groove;
+  padding-right: 20px;
+}
+
+.showladivision {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.rating-show {
+  color: $poissonrouge;
 }
