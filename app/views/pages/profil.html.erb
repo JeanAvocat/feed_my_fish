@@ -1,10 +1,6 @@
 <h2 class="text-center mbtitle">Mon compte</h2>
       <div class="card-product mbinfo">
-      <% if current_user.avatar.attached? %>
-        <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      <% else %>
-        <%= image_tag "avatars/fishes/stupid_fish.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      <% end %>
+        <%= render "shared/avatar", owner: current_user %>
       <p><strong><%= current_user.first_name %><%= current_user.last_name %></strong></p>
       <p><%= current_user.email%></p>
       <p><%= current_user.description%></p>
