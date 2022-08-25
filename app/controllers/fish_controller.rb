@@ -21,6 +21,22 @@ class FishController < ApplicationController
     redirect_to fish_path(@fish)
   end
 
+  def edit
+    @fish = Fish.find(params[:id])
+  end
+
+  def update
+    @fish = Fish.find(params[:id])
+    @fish.update(fish_params)
+    redirect_to profil_path
+  end
+
+  def destroy
+    @fish = Fish.find(params[:id])
+    @fish.destroy
+    redirect_to profil_path
+  end
+
   private
 
   def fish_params
