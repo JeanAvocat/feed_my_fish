@@ -18,7 +18,6 @@
     padding: 10px 160px 20px;
     font-style: italic;
     font-size: 24px;
-    line-height: 30px;
   }
 }
 
@@ -134,7 +133,7 @@
 /* Swim Animation */
 @keyframes swim {
   0% {
-    transform: translateY(120px) translateX(0) rotate(20deg);
+    transform: translateY(120px) translateX(-80px) rotate(20deg);
   }
   25% {
     transform: translateY(160px) translateX(250px) rotate(-20deg);

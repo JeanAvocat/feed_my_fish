@@ -1,0 +1,33 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.star-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.star-icon path,
+.star-icon polygon,
+.star-icon rect {
+  fill: $poissonrouge;
+}
+
+.star-icon circle {
+  stroke: $poissonrouge;
+  stroke-width: 1;
+}
+
+.ping-icon {
+  width: 1.2em;
+  height: 2em;
+}
+
+.ping-icon rect {
+  fill: grey;
+}
+
+.ping-icon circle {
+  stroke: grey;
+  stroke-width: 1;
+}
