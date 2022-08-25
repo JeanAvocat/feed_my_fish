@@ -2,10 +2,14 @@
   <% @fishbooks.each do |fish| %>
     <% fish.bookings.each do |book| %>
       <div class="card-product mbinfo">
-
+      <% if book.fish.photo.attached?  %>
+        <%= cl_image_tag book.fish.photo.key %>
+        <% else %>
+        <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+      <% end %>
       <p><strong><%= book.fish.title %></strong></p>
       <p><strong><%= book.keeper.first_name %> <%= book.keeper.last_name %></strong></p>
-      <p><strong><%= book.start_time %> <%= book.end_time %></strong></p>
+      <p><%= book.start_time %> <%= book.end_time %></p>
       <div class="btn_dispo">
       <input type="button" value="Accepter" class="btn-blue">
       <input type="button" value="Refuser" class="btn-red">
@@ -17,10 +21,15 @@
 <h2 class="text-center mbtitle">Mes gardes à venir</h2>
   <% @askbooks.each do |askbook| %>
     <div class="card-product mbinfo">
-
+    <% if askbook.fish.photo.attached?  %>
+        <%= cl_image_tag askbook.fish.photo.key %>
+        <% else %>
+        <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+      <% end %>
     <p><strong><%= askbook.fish.title %></strong></p>
     <p><%= askbook.fish.specie %></p>
     <p><%= askbook.fish.daily_price %>€</p>
-    <%= askbook.start_time %> <%= askbook.end_time %></strong>
+    <p><%= askbook.start_time %> <%= askbook.end_time %></strong></p>
+    <p><strong><%= askbook.status %></strong></p>
     </div>
   <% end %>
