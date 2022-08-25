@@ -1,5 +1,16 @@
 <div class="index-searchbar">
-Future search barre
+<%= form_with url: fish_index_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Rechercher un poisson"
+  %>
+  <%= button_tag type:'submit', class: "btn btn-primary" do %>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  <% end %>
+<% end %>
+
+
 </div>
 <div class="fishes-cards">
   <div class="cards">

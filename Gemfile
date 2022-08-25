@@ -57,6 +57,9 @@ gem "simple_form", github: "heartcombo/simple_form"
 # generate everything to configure user
 gem "devise"
 
+# gem for search bar
+gem "pg_search"
+
 #
 gem "autoprefixer-rails"
 
