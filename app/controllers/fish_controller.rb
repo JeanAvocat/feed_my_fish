@@ -2,7 +2,11 @@ class FishController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @fish = Fish.all
+    if params[:query].present?
+      @fish = Fish.search_fish_by_caracteristic(params[:query])
+    else
+      @fish = Fish.all
+    end
   end
 
   def show
