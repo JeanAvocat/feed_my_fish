@@ -27,7 +27,7 @@
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mes réservations", my_bookings_path, class: "dropdown-item" %>
-              <%= link_to "Profil", "#", class: "dropdown-item" %>
+              <%= link_to "Profil", profil_path, class: "dropdown-item" %>
               <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

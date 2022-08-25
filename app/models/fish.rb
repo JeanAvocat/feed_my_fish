@@ -2,7 +2,7 @@ class Fish < ApplicationRecord
   include PgSearch::Model
 
   belongs_to :owner, class_name: "User"
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   has_one_attached :photo
 
