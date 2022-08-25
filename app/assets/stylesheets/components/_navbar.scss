@@ -8,5 +8,14 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+}
+
+.nav-item {
+  font-size: 16px;
+  padding: 5px 8px 0px 0px;
+}
+
+.nav-item:hover {
+  color: $poissonrouge;
 }
