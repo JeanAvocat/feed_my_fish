@@ -8,7 +8,6 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log("hello from map")
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -20,16 +19,28 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
 
-  #addMarkersToMap() {
-    console.log(this.markersValue);
-      new mapboxgl.Marker()
-        .setLngLat([ this.markersValue.lng, this.markersValue.lat ])
-        .addTo(this.map)
-  }
-
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     bounds.extend([ this.markersValue.lng, this.markersValue.lat ])
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  }
+
+  #addMarkersToMap() {
+    const popup = new mapboxgl.Popup().setHTML(this.markersValue.info_window)
+    console.log(this.markersValue.info_window);
+
+    // Create a HTML element for your custom marker
+    const customMarker = document.createElement("div")
+    customMarker.className = "marker"
+    customMarker.style.backgroundImage = `url('${this.markersValue.image_url}')`
+    customMarker.style.backgroundSize = "contain"
+    customMarker.style.width = "45px"
+    customMarker.style.height = "45px"
+
+    // Pass the element as an argument to the new marker
+    new mapboxgl.Marker(customMarker)
+      .setLngLat([this.markersValue.lng, this.markersValue.lat])
+      .setPopup(popup)
+      .addTo(this.map)
   }
 }
