@@ -30,28 +30,28 @@
               </div>
             </div>
           </div>
-           <div class="price">
-             <h2><%= @fish.daily_price %>€</h2>
+          <div class="price">
+            <h2><%= @fish.daily_price %>€</h2>
               <h3>/jour</h3>
             </div>
           </div>
-        </div>
-        <h2 class="card-trip-fish-show-pricing"><%= @fish.daily_price %>€ / jour</h2>
+          <div class="m-4"></div>
+          <div class="map-show-fish d-flex justify-content-center p-0 mt-4" style="width: 100%;">
+            <div style="width: 100%; height: 200px;"
+                data-controller="map"
+                data-map-markers-value="<%= @markers.to_json %>"
+                data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+          </div>
       </div>
     </div>
   </div>
   <div>
-    <div class="map-show-fish">
-      <div style="width: 60%; height: 400px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
     <div class="text-center">
       <div class="form-bloc">
         <%= simple_form_for([@fish, @booking]) do |f| %>
         <div class="form" data-controller="totalprice" data-price="<%= @fish.daily_price %>">
-          <h5 class="mb-4"><strong>Je veux m'occuper temporairement de ce poisson</strong></h5>
+          <h5 class="mb-4"><strong>Je veux louer ce poisson</strong></h5>
           <div class="row d-flex justify-content-center mt-2">
             <div class="col-3">
               <%= f.input :start_time, as: :date, html5: true, label: "A partir du...", input_html: { data: {'totalprice-target':'start','action':'change->totalprice#updateTotalPrice' }, value: Date.today } %>
@@ -60,9 +60,9 @@
               <%= f.input :end_time, as: :date, html5: true,
                             label: "Jusqu'au...", input_html: { data: {'totalprice-target':'end','action':'change->totalprice#updateTotalPrice' }, value: Date.today + 15 } %>
             </div>
-            <div>
+            <div id="title-price-details">
               <h3 class="mb-2 mt-2">Détails du prix :</h3>
-              <div class="d-flex justify-content-center pt-1">
+              <div class="d-flex justify-content-center pt-1" id="card-prices-and-duration-details">
                 <div class="d-flex flex-column" style="width: 15rem;">
                   <div class="d-flex justify-content-between">
                     <div>
@@ -83,10 +83,14 @@
                 </div>
               </div>
             </div>
-            <div class="btn-submit">
-              <%= f.button :submit, "Demander à garder ce poisson" %>
+              <% if user_signed_in? %>
+                <div class="btn-submit">
+                  <%= f.button :submit, "Demander à garder ce poisson" %>
+                </div>
+              <% else %>
+                  <p id="connexion-text-for-booking">Inscrivez-vous ou connectez-vous pour louer un poisson</p>
               <% end %>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>
