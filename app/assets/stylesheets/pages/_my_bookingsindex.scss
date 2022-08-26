@@ -1,24 +1,66 @@
-.mbtitle {
-    color: black;
-    font-size: 32px;
-    margin-top: 25px;
-}
-.mbinfo {
-  color: black;
-  font-size: 13px;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 30px;
-  justify-content: space-between;
-  padding: 0px 10px 0px 0px;
-  p {
-    color: black;
-  font-size: 17px;
+.container-demande-de-garde {
+  padding: 60px 0px 60px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    color: $poissonrouge;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
-.btn_dispo {
-  column-count: 1;
+
+.tableau-title {
+  color: $lightgray;
+  font-size: 13px;
+  width: 800px;
   display: flex;
-  text-align: center;
-  flex-direction: column;
+  margin: 20px 0px -30px 0px;
+
+
+  .poisson-title {
+    margin-left: 170px;
+  }
+
+  .demandeur-title {
+    margin-left: 133px;
+  }
+
+  .dates-title {
+    margin-left: 126px;
+  }
+}
+
+.ask-tableau-title {
+  color: $lightgray;
+  font-size: 13px;
+  width: 800px;
+  display: flex;
+  margin: 20px 0px -30px 0px;
+
+
+  .poisson-title {
+    margin-left: 170px;
+  }
+
+  .demandeur-title {
+    margin-left: 133px;
+  }
+
+  .dates-title {
+    margin-left: 136px;
+  }
+
+  .tarif-title {
+    margin-left: 160px;
+  }
+
+  .date-title {
+    margin-left: 160px;
+  }
+
+  .statut-title {
+    margin-left: 104px;
+  }
 }

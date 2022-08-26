@@ -59,15 +59,13 @@
 
 // LIGNES CI-DESSOUS IMPORTEES DE CARD.SCSS
 
-// CARDS INITIALES DE L'INDEX
-
+// CARDS BOOKING INDEX
 .card-product {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
+  border-radius: 5px;
 }
 
 .card-product img {
@@ -90,10 +88,111 @@
   margin-top: 8px;
 }
 
+.fish-card-booking {
+  color: black;
+  font-size: 13px;
+  width: 800px;
+  margin-top: 30px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    color: black;
+    font-size: 16px;
+    padding: 0px 10px;
+    text-align: center;
+  }
+}
+
 .card-product .card-product-infos {
   padding: 16px;
 }
 
+.image-car-booking {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+.text-card-booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fish-name-card-booking {
+  width: 150px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.fish-keeper-card-booking {
+  display: flex;
+  width: 250px;
+  justify-content: space-around;
+}
+
+.fish-dates-card-booking {
+  display: flex;
+  width: 140px;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.btn-booking {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accept-btn {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: rgba(194, 246, 115, 1);
+  padding: 6px 11px;
+  border-radius: 50px;
+  font-weight: 50;
+  transition: opacity 0.3s ease;
+  margin: 5px 10px;
+  font-size: 15px;
+  display: flex;
+}
+
+.accept-btn:hover {
+  font-weight: 50;
+  background-color: rgb(164, 227, 69);
+  color: black;
+  box-shadow: 0px 0px 3px grey;
+}
+
+.decline-btn {
+  text-align: center;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(249, 91, 91);
+  padding: 6px 11px;
+  border-radius: 50px;
+  font-weight: 50;
+  transition: opacity 0.3s ease;
+  margin: 5px 10px;
+  font-size: 15px;
+  display: flex;
+}
+
+.decline-btn:hover {
+  font-style: 50;
+  color: black;
+  background-color: rgb(215, 53, 53);
+  box-shadow: 0px 0px 3px grey;
+}
+
+.confirm-btn {
+  padding: 6px 11px;
+  margin: 20px;
+}
 
 
 // CARDS FOR SHOW VIEW (FISH)
