@@ -12,6 +12,11 @@ class FishController < ApplicationController
   def show
     @fish = Fish.find(params[:id])
     @booking = Booking.new
+
+    @markers = { lat: @fish.latitude,
+                 lng: @fish.longitude,
+                 info_window: render_to_string(partial: "info_window", locals: { fish: @fish }),
+                 image_url: helpers.asset_url("fish.png") }
   end
 
   def new
