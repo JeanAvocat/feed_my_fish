@@ -19,6 +19,5 @@
     <%= render "shared/flashes" %>
     <%= yield %>
   </body>
-
+<%= render "shared/footer" unless current_page?('/') %>
 </html>
-  <%= render "shared/footer" unless current_page?('/') %>
