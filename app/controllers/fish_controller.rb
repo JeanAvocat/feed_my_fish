@@ -26,8 +26,11 @@ class FishController < ApplicationController
   def create
     @fish = Fish.new(fish_params)
     @fish.owner = current_user
-    @fish.save
-    redirect_to fish_path(@fish)
+    if @fish.save
+      redirect_to fish_path(@fish)
+    else
+      render "fish/new", status: :unprocessable_entity
+    end
   end
 
   def edit
