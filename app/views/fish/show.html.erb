@@ -9,9 +9,7 @@
         <% end %>
         <%= link_to "< Retour", fish_index_path, class: "btn-return-show" %>
       </div>
-        <div class="card-trip-fish-show-fish avatar-bordered">
-          <%= render "shared/avatar", owner: @fish.owner%>
-        </div>
+        <%= render "shared/avatar", owner: @fish.owner, attributes: { class: "avatar-show card-trip-fish-show-fish avatar-bordered" } %>
       <div class="fish-show-infos">
         <h2 class="fish-name-show"><%= @fish.owner.first_name.upcase %></h2>
         <h6>vous propose de louer <%= @fish.title %></h6>
