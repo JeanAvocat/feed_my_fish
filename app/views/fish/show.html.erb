@@ -9,9 +9,12 @@
         <% end %>
         <%= link_to "< Retour", fish_index_path, class: "btn-return-show" %>
       </div>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-fish-show-fish avatar-bordered"/>
+        <div class="card-trip-fish-show-fish avatar-bordered">
+          <%= render "shared/avatar", owner: @fish.owner%>
+        </div>
       <div class="fish-show-infos">
         <h2 class="fish-name-show"><%= @fish.title.upcase %></h2>
+        <h6>vous est proposé par <%= @fish.owner.first_name %></h6>
         <h2 class="rating-show"><%= rand(1..5) %>/5</h2>
         <div class= "showladivision">
           <div class="details-fish">
@@ -37,9 +40,6 @@
         </div>
         <h2 class="card-trip-fish-show-pricing"><%= @fish.daily_price %>€ / jour</h2>
         <%# IMPORTANT : avatar du fish owner %>
-        <div class="card-trip-fish-show-user avatar-bordered">
-          <%= render "shared/avatar", owner: @fish.owner %>
-        </div>
       </div>
     </div>
   </div>
