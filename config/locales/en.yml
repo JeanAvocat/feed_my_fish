@@ -31,3 +31,17 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    models:
+      fish: Poisson
+    attributes:
+      fish:
+        title: "le nom du poisson"
+        specie: "l'espèce"
+        location: "la ville"
+        daily_price: "le prix journalier"
+      booking:
+        start_time: "la date de début"
+        end_time: "la date de fin"

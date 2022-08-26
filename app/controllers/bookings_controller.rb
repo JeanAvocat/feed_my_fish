@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking.status = "En attente de validation"
     @booking.fish = @fish
     if @booking.save
-      redirect_to fish_path(@fish)
+      redirect_to my_bookings_path
     else
       render "fish/show", status: :unprocessable_entity
     end
