@@ -13,8 +13,8 @@
           <%= render "shared/avatar", owner: @fish.owner%>
         </div>
       <div class="fish-show-infos">
-        <h2 class="fish-name-show"><%= @fish.title.upcase %></h2>
-        <h6>vous est proposé par <%= @fish.owner.first_name %></h6>
+        <h2 class="fish-name-show"><%= @fish.owner.first_name.upcase %></h2>
+        <h6>vous propose de louer <%= @fish.title %></h6>
         <h2 class="rating-show"><%= rand(1..5) %>/5</h2>
         <div class= "showladivision">
           <div class="details-fish">
