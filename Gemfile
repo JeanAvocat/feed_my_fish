@@ -60,6 +60,9 @@ gem "devise"
 # gem for search bar
 gem "pg_search"
 
+# gem geocoder
+gem "geocoder"
+
 #
 gem "autoprefixer-rails"
 

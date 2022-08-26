@@ -35,7 +35,6 @@
             </div>
           </div>
         </div>
-        <h2 class="card-trip-fish-show-pricing"><%= @fish.daily_price %>€ / jour</h2>
         <%# IMPORTANT : avatar du fish owner %>
         <div class="card-trip-fish-show-user avatar-bordered">
           <%= render "shared/avatar", owner: @fish.owner %>
@@ -43,32 +42,40 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
-    <div class="form-bloc">
-      <%= simple_form_for([@fish, @booking]) do |f| %>
-      <div class="form" data-controller="totalprice" data-price="<%= @fish.daily_price %>">
-        <h5><strong>Je veux garder ce poisson</strong></h5>
-        <div class="row d-flex justify-content-center">
-          <div class="col-3">
-            <%= f.input :start_time, as: :date, html5: true, label: "A partir du...", input_html: { data: {'totalprice-target':'start','action':'change->totalprice#updateTotalPrice' } } %>
-          </div>
-          <div class="col-3">
-            <%= f.input :end_time, as: :date, html5: true, label: "Jusqu'au...", input_html: { data: {'totalprice-target':'end','action':'change->totalprice#updateTotalPrice' } } %>
-          </div>
-          <div>
-            <h3>Durée de la mission :</h3>
-            <h4><span data-totalprice-target="duration">0</span> jours</h4>
-          </div>
-          <div>
-            <h3>Rémunération totale :</h3>
-            <h4><span data-totalprice-target="result">0</span> €</h4>
-          </div>
-          <div class="btn-submit">
-            <%= f.button :submit, "Demander à garder ce poisson" %>
-            <% end %>
+  <div>
+    <div class="map-show-fish">
+      <div style="width: 60%; height: 400px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+    <div class="text-center">
+      <div class="form-bloc">
+        <%= simple_form_for([@fish, @booking]) do |f| %>
+        <div class="form" data-controller="totalprice" data-price="<%= @fish.daily_price %>">
+          <h5><strong>Je veux garder ce poisson</strong></h5>
+          <div class="row d-flex justify-content-center">
+            <div class="col-3">
+              <%= f.input :start_time, as: :date, html5: true, label: "A partir du...", input_html: { data: {'totalprice-target':'start','action':'change->totalprice#updateTotalPrice' } } %>
+            </div>
+            <div class="col-3">
+              <%= f.input :end_time, as: :date, html5: true, label: "Jusqu'au...", input_html: { data: {'totalprice-target':'end','action':'change->totalprice#updateTotalPrice' } } %>
+            </div>
+            <div>
+              <h3>Durée de la mission :</h3>
+              <h4><span data-totalprice-target="duration">0</span> jours</h4>
+            </div>
+            <div>
+              <h3>Rémunération totale :</h3>
+              <h4><span data-totalprice-target="result">0</span> €</h4>
+            </div>
+            <div class="btn-submit">
+              <%= f.button :submit, "Demander à garder ce poisson" %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </div>
-</div>
