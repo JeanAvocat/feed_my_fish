@@ -83,10 +83,14 @@
                 </div>
               </div>
             </div>
-            <div class="btn-submit">
-              <%= f.button :submit, "Demander à garder ce poisson" %>
+              <% if user_signed_in? %>
+                <div class="btn-submit">
+                  <%= f.button :submit, "Demander à garder ce poisson" %>
+                </div>
+              <% else %>
+                  <p id="connexion-text-for-booking">Inscrivez-vous ou connectez-vous pour louer un poisson</p>
               <% end %>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>
