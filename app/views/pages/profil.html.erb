@@ -1,32 +1,36 @@
-<h2 class="text-center mbtitle">Mon compte</h2>
-      <div class="card-product mbinfo">
-        <%= render "shared/avatar", owner: current_user, attributes: { class: "avatar" } %>
-      <p><strong><%= current_user.first_name %><%= current_user.last_name %></strong></p>
-      <p><%= current_user.email%></p>
-      <p><%= current_user.description%></p>
-    </div>
-</div>
+<div class="container-demande-de-garde">
+  <h2>Mon compte</h2>
 
-<% if current_user.fish != [] %>
-  <h2 class="text-center mbtitle">Mes Poissons</h2>
-  <% current_user.fish.each do |fish| %>
-    <div class="card-product mbinfo">
-    <% if fish.photo.attached?  %>
-        <%= cl_image_tag fish.photo.key %>
-        <% else %>
-        <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
-    <% end %>
-    <p><strong><%= fish.title %></strong></p>
-    <p><%= fish.specie %></p>
-    <p><%= fish.daily_price %>€</p>
-    <%= link_to "Modifier",
-    edit_fish_path(fish),
-    data: {turbo_method: :get}
-    %>
-    <%= link_to "Supprimer",
-    fish_path(fish),
-    data: {turbo_method: :delete, turbo_confirm: "Vous êtes sûr?"}
-    %>
+    <div class="user-card-profile">
+          <%= render "shared/avatar", owner: current_user, attributes: { class: "avatar" } %>
+        <h6><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h6>
+        <p><%= current_user.email%></p>
+        <p>"<%= current_user.description%>"</p>
     </div>
+
+  <% if current_user.fish != [] %>
+    <h2>Mes Poissons</h2>
+    <% current_user.fish.each do |fish| %>
+      <div class="card-product fish-card-booking">
+      <% if fish.photo.attached?  %>
+          <%= cl_image_tag fish.photo.key %>
+          <% else %>
+          <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+      <% end %>
+      <p><strong><%= fish.title %></strong></p>
+      <p><%= fish.specie %></p>
+      <p><%= fish.daily_price %>€</p>
+
+      <div class="btn-booking">
+        <%= link_to "Modifier",
+        edit_fish_path(fish),
+        data: {turbo_method: :get}, class: "modify-btn"
+        %>
+        <%= link_to "Supprimer",
+        fish_path(fish),
+        data: {turbo_method: :delete, turbo_confirm: "Vous êtes sûr?"}, class: "decline-btn"%>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>

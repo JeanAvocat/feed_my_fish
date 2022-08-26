@@ -96,6 +96,7 @@
   padding: 0px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   p {
     color: black;
@@ -144,54 +145,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.accept-btn {
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  background-color: rgba(194, 246, 115, 1);
-  padding: 6px 11px;
-  border-radius: 50px;
-  font-weight: 50;
-  transition: opacity 0.3s ease;
-  margin: 5px 10px;
-  font-size: 15px;
-  display: flex;
-}
-
-.accept-btn:hover {
-  font-weight: 50;
-  background-color: rgb(164, 227, 69);
-  color: black;
-  box-shadow: 0px 0px 3px grey;
-}
-
-.decline-btn {
-  text-align: center;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  background-color: rgb(249, 91, 91);
-  padding: 6px 11px;
-  border-radius: 50px;
-  font-weight: 50;
-  transition: opacity 0.3s ease;
-  margin: 5px 10px;
-  font-size: 15px;
-  display: flex;
-}
-
-.decline-btn:hover {
-  font-style: 50;
-  color: black;
-  background-color: rgb(215, 53, 53);
-  box-shadow: 0px 0px 3px grey;
-}
-
-.confirm-btn {
-  padding: 6px 11px;
-  margin: 20px;
 }
 
 
@@ -248,6 +201,33 @@
   width: 40px;
 }
 
+.user-card-profile {
+  overflow: hidden;
+  color: black;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 0px 300px 30px 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+
+  h6 {
+    font-size: 40px;
+    line-height: 30px;
+  }
+}
+
+.user-card-profile img {
+  height: 100%;
+  width: 180px;
+  object-fit: cover;
+  margin: 0px 0px 30px 0px;
+  border-color: white;
+  border-width: 2px;
+}
 
 #card-prices-and-duration-details p {
   color:black;
