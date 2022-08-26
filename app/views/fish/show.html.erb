@@ -9,9 +9,12 @@
         <% end %>
         <%= link_to "< Retour", fish_index_path, class: "btn-return-show" %>
       </div>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-fish-show-fish avatar-bordered"/>
+        <div class="card-trip-fish-show-fish avatar-bordered">
+          <%= render "shared/avatar", owner: @fish.owner%>
+        </div>
       <div class="fish-show-infos">
-        <h2 class="fish-name-show"><%= @fish.title.upcase %></h2>
+        <h2 class="fish-name-show"><%= @fish.owner.first_name.upcase %></h2>
+        <h6>vous propose de louer <%= @fish.title %></h6>
         <h2 class="rating-show"><%= rand(1..5) %>/5</h2>
         <div class= "showladivision">
           <div class="details-fish">
@@ -22,7 +25,7 @@
               <div class="text-card">
                 <p><svg class="ping-icon" viewBox="-2 2 20 20">
 							  <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
-						    </svg> zone géographique: <%= @fish.location %></p>
+					      </svg> zone géographique: <%= @fish.location %></p>
                 <p><svg class="ping-icon" viewBox="-2 2 20 20">
 							  <path d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708"></path>
 						    </svg> espèce: <%= @fish.specie %></p>
@@ -35,44 +38,39 @@
             </div>
           </div>
         </div>
-        <%# IMPORTANT : avatar du fish owner %>
-        <div class="card-trip-fish-show-user avatar-bordered">
-          <%= render "shared/avatar", owner: @fish.owner %>
-        </div>
+        <h2 class="card-trip-fish-show-pricing"><%= @fish.daily_price %>€ / jour</h2>
       </div>
     </div>
   </div>
-  <div>
-    <div class="map-show-fish">
-      <div style="width: 60%; height: 400px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
-    <div class="text-center">
-      <div class="form-bloc">
-        <%= simple_form_for([@fish, @booking]) do |f| %>
-        <div class="form" data-controller="totalprice" data-price="<%= @fish.daily_price %>">
-          <h5><strong>Je veux garder ce poisson</strong></h5>
-          <div class="row d-flex justify-content-center">
-            <div class="col-3">
-              <%= f.input :start_time, as: :date, html5: true, label: "A partir du...", input_html: { data: {'totalprice-target':'start','action':'change->totalprice#updateTotalPrice' } } %>
-            </div>
-            <div class="col-3">
-              <%= f.input :end_time, as: :date, html5: true, label: "Jusqu'au...", input_html: { data: {'totalprice-target':'end','action':'change->totalprice#updateTotalPrice' } } %>
-            </div>
-            <div>
-              <h3>Durée de la mission :</h3>
-              <h4><span data-totalprice-target="duration">0</span> jours</h4>
-            </div>
-            <div>
-              <h3>Rémunération totale :</h3>
-              <h4><span data-totalprice-target="result">0</span> €</h4>
-            </div>
-            <div class="btn-submit">
-              <%= f.button :submit, "Demander à garder ce poisson" %>
-              <% end %>
-            </div>
+  <div class="map-show-fish">
+    <div style="width: 60%; height: 400px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+  <div class="text-center">
+    <div class="form-bloc">
+      <%= simple_form_for([@fish, @booking]) do |f| %>
+      <div class="form" data-controller="totalprice" data-price="<%= @fish.daily_price %>">
+        <h5><strong>Je veux garder ce poisson</strong></h5>
+        <div class="row d-flex justify-content-center">
+          <div class="col-3">
+            <%= f.input :start_time, as: :date, html5: true, label: "A partir du...", input_html: { data: {'totalprice-target':'start','action':'change->totalprice#updateTotalPrice' } } %>
+          </div>
+          <div class="col-3">
+            <%= f.input :end_time, as: :date, html5: true, label: "Jusqu'au...", input_html: { data: {'totalprice-target':'end','action':'change->totalprice#updateTotalPrice' } } %>
+          </div>
+          <div>
+            <h3>Durée de la mission :</h3>
+            <h4><span data-totalprice-target="duration">0</span> jours</h4>
+          </div>
+          <div>
+            <h3>Rémunération totale :</h3>
+            <h4><span data-totalprice-target="result">0</span> €</h4>
+          </div>
+          <div class="btn-submit">
+            <%= f.button :submit, "Demander à louer ce poisson" %>
+            <% end %>
           </div>
         </div>
       </div>
