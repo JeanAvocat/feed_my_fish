@@ -60,9 +60,9 @@
               <%= f.input :end_time, as: :date, html5: true,
                             label: "Jusqu'au...", input_html: { data: {'totalprice-target':'end','action':'change->totalprice#updateTotalPrice' }, value: Date.today + 15 } %>
             </div>
-            <div>
+            <div id="title-price-details">
               <h3 class="mb-2 mt-2">Détails du prix :</h3>
-              <div class="d-flex justify-content-center pt-1">
+              <div class="d-flex justify-content-center pt-1" id="card-prices-and-duration-details">
                 <div class="d-flex flex-column" style="width: 15rem;">
                   <div class="d-flex justify-content-between">
                     <div>
