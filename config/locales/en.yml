@@ -42,3 +42,6 @@ en:
         specie: "l'espèce"
         location: "la ville"
         daily_price: "le prix journalier"
+      booking:
+        start_time: "la date de début"
+        end_time: "la date de fin"
