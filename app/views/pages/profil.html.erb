@@ -1,32 +1,34 @@
-<h2 class="text-center mbtitle">Mon compte</h2>
-      <div class="card-product mbinfo">
-        <%= render "shared/avatar", owner: current_user, attributes: { class: "avatar" } %>
-      <p><strong><%= current_user.first_name %><%= current_user.last_name %></strong></p>
-      <p><%= current_user.email%></p>
-      <p><%= current_user.description%></p>
-    </div>
-</div>
+<div class="container-demande-de-garde">
+  <h2 class="text-center mbtitle">Mon compte</h2>
+        <div class="card-product mbinfo">
+          <%= render "shared/avatar", owner: current_user, attributes: { class: "avatar" } %>
+        <p><strong><%= current_user.first_name %><%= current_user.last_name %></strong></p>
+        <p><%= current_user.email%></p>
+        <p><%= current_user.description%></p>
+      </div>
+  </div>
 
-<% if current_user.fish != [] %>
-  <h2 class="text-center mbtitle">Mes Poissons</h2>
-  <% current_user.fish.each do |fish| %>
-    <div class="card-product mbinfo">
-    <% if fish.photo.attached?  %>
-        <%= cl_image_tag fish.photo.key %>
-        <% else %>
-        <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+  <% if current_user.fish != [] %>
+    <h2 class="text-center mbtitle">Mes Poissons</h2>
+    <% current_user.fish.each do |fish| %>
+      <div class="card-product mbinfo">
+      <% if fish.photo.attached?  %>
+          <%= cl_image_tag fish.photo.key %>
+          <% else %>
+          <%= image_tag "avatars/fishes/benoit_avatar.jpg", alt: "a fish" %>
+      <% end %>
+      <p><strong><%= fish.title %></strong></p>
+      <p><%= fish.specie %></p>
+      <p><%= fish.daily_price %>€</p>
+      <%= link_to "Modifier",
+      edit_fish_path(fish),
+      data: {turbo_method: :get}
+      %>
+      <%= link_to "Supprimer",
+      fish_path(fish),
+      data: {turbo_method: :delete, turbo_confirm: "Vous êtes sûr?"}
+      %>
+      </div>
     <% end %>
-    <p><strong><%= fish.title %></strong></p>
-    <p><%= fish.specie %></p>
-    <p><%= fish.daily_price %>€</p>
-    <%= link_to "Modifier",
-    edit_fish_path(fish),
-    data: {turbo_method: :get}
-    %>
-    <%= link_to "Supprimer",
-    fish_path(fish),
-    data: {turbo_method: :delete, turbo_confirm: "Vous êtes sûr?"}
-    %>
-    </div>
   <% end %>
-<% end %>
+</div>
