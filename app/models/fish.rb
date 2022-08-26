@@ -1,5 +1,4 @@
 class Fish < ApplicationRecord
-  include PgSearch::Model
 
   belongs_to :owner, class_name: "User"
   has_many :bookings, dependent: :destroy
@@ -12,5 +11,11 @@ class Fish < ApplicationRecord
   validates :specie, presence: true, inclusion: { in: SPECIES }
   validates :daily_price, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
+  # use gem PG_search in the action index to search fish
+  include PgSearch::Model
   pg_search_scope :search_fish_by_caracteristic, against: %i[title location specie daily_price], using: { tsearch: { prefix: true } }
+
+  # use Geocoding gem to display fish location in the show
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
