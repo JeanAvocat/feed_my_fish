@@ -1,5 +1,7 @@
+<%#= Partial to display avatar picture of the user with the possibility to add special attributes depend where we use it%>
+
 <% if owner.avatar.attached? %>
-  <%= cl_image_tag owner.avatar.key, class: "avatar" %>
+  <%= cl_image_tag owner.avatar.key, attributes %>
 <% else %>
-  <%= image_tag "avatars/fishes/stupid_fish.jpg", class: "avatar" %>
+  <%= image_tag "avatars/fishes/stupid_fish.jpg", attributes  %>
 <% end %>
