@@ -89,3 +89,73 @@
   opacity: 0.8;
   font-weight: bold;
 }
+
+.accept-btn {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: rgba(194, 246, 115, 1);
+  padding: 6px 11px;
+  border-radius: 50px;
+  font-weight: 50;
+  transition: opacity 0.3s ease;
+  margin: 5px 10px;
+  font-size: 15px;
+  display: flex;
+}
+
+.accept-btn:hover {
+  font-weight: 50;
+  background-color: rgb(164, 227, 69);
+  color: black;
+  box-shadow: 0px 0px 3px grey;
+}
+
+.decline-btn {
+  text-align: center;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(249, 91, 91);
+  padding: 6px 11px;
+  border-radius: 50px;
+  font-weight: 50;
+  transition: opacity 0.3s ease;
+  margin: 5px 10px;
+  font-size: 15px;
+  display: flex;
+}
+
+.decline-btn:hover {
+  font-style: 50;
+  color: black;
+  background-color: rgb(215, 53, 53);
+  box-shadow: 0px 0px 3px grey;
+}
+
+.confirm-btn {
+  padding: 6px 11px;
+  margin: 20px;
+}
+
+.modify-btn {
+  text-align: center;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(253, 183, 85);
+  padding: 6px 11px;
+  border-radius: 50px;
+  font-weight: 50;
+  transition: opacity 0.3s ease;
+  margin: 5px 10px;
+  font-size: 15px;
+  display: flex;
+}
+
+.modify-btn:hover {
+  font-style: 50;
+  color: black;
+  background-color: rgb(244, 153, 27);
+  box-shadow: 0px 0px 3px grey;
+}
