@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Feed my fish
+
+Feed my fish est un site qui permet de mettre en relation des particuliers qui souhaitent louer et faire louer des poissons.
